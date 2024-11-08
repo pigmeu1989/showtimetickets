@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowTime Tickets - Wesley Safadão em Recife</title>
+    <style>
+        /* Reset e estilo de base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; color: #333; background-color: #f5f5f5; }
+
+        /* Estilos do cabeçalho */
+        header { background-color: #000; padding: 25px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 2em; color: #fff; font-weight: bold; text-decoration: none; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+
+        /* Banner principal */
+        .banner {
+            background: url('https://i.ytimg.com/vi/c4W1M0p0Rn0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA1xffrZHLmL6P_19WwiOzxHj9M1w') no-repeat center center;
+    	    background-size: cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5f5f7;
+            text-align: center;
+            position: relative;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(143,154,176, 0.7);
+        }
+        .banner h1 {
+            font-size: 3em;
+            z-index: 1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        .banner p {
+            font-size: 1.5em;
+            z-index: 1;
+            margin-top: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Conteúdo principal */
+        .container { padding: 20px; max-width: 1000px; margin: 0 auto; }
+
+        /* Seção de ingressos */
+        .tickets { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .ticket-option {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+        }
+        .ticket-option h2 { font-size: 1.5em; color: #ff5a5a; }
+        .ticket-option p { font-size: 1.2em; margin: 10px 0; }
+        .ticket-option .price { font-size: 1.5em; color: #333; margin-top: 10px; font-weight: bold; }
+
+        /* Botão de compra */
+        .btn-buy {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff5a5a;
+            color: #fff;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .btn-buy:hover { background-color: #e24747; }
+
+        /* Galeria de shows */
+        .shows-gallery { margin-top: 40px; }
+        .shows-gallery h2 { font-size: 2em; margin-bottom: 20px; }
+        .gallery { display: flex; gap: 15px; flex-wrap: wrap; }
+        .gallery-item {
+            width: 200px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        /* Rodapé */
+        footer { text-align: center; padding: 20px; background-color: #ff5a5a; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <a href="#" class="logo">ShowTime Tickets</a>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Shows</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner do evento principal -->
+    <section class="banner">
+        <div>
+            <h1>Wesley Safadão ao Vivo em Recife</h1>
+            <p>14 de Novembro de 2024 - Recife, PE</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+
+        <!-- Detalhes dos ingressos -->
+        <section class="tickets">
+            <div class="ticket-option">
+                <h2>Pista</h2>
+                <p>Acesso à pista comum</p>
+                <p class="price">R$ 300</p>
+                <a href="https://linkdovendedor.com" class="btn-buy">Comprar Ingresso</a>
+            </div>
+            <div class="ticket-option">
+                <h2>Pista VIP</h2>
+                <p>Acesso à área VIP</p>
+                <p class="price">R$ 500</p>
+                <a href="https://linkdovendedor.com" class="btn-buy">Comprar Ingresso</a>
+            </div>
+            <div class="ticket-option">
+                <h2>Camarote</h2>
+                <p>Assentos exclusivos no camarote</p>
+                <p class="price">R$ 800</p>
+                <a href="https://linkdovendedor.com" class="btn-buy">Comprar Ingresso</a>
+            </div>
+            <div class="ticket-option">
+                <h2>Camarote Premium</h2>
+                <p>Assentos premium no camarote</p>
+                <p class="price">R$ 1000</p>
+                <a href="https://linkdovendedor.com" class="btn-buy">Comprar Ingresso</a>
+            </div>
+        </section>
+
+        <!-- Galeria de outros shows -->
+        <section class="shows-gallery">
+            <h2>Outros Shows Disponíveis</h2>
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('URL_DA_IMAGEM_SHOW1.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('URL_DA_IMAGEM_SHOW2.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('URL_DA_IMAGEM_SHOW3.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('URL_DA_IMAGEM_SHOW4.jpg');"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 ShowTime Tickets - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
